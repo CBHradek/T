@@ -1,1 +1,6 @@
+# Add your links below. Rearrange the lines to change the order.
+# Format: Button Text | File/URL | redirect OR download
 
+Historie Sboru PDF | POHLED DO STOLETÉ HISTORIE HRADÉCKÉHO SBORU.pdf | download
+Our Main Website | https://www.naskale.info | redirect
+Our YouTube | https://www.youtube.com/watch?v=dQw4w9WgXcQ | redirect
