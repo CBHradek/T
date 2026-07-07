@@ -1,11 +1,10 @@
 # Add your links below. Rearrange the lines to change the order.
 # Format: Button Text | File/URL | redirect OR download
 
-Jak sie chodzilo kiedysik do kosciola? | https://www.youtube.com/watch?v=JOxMAFHaSdo | redirect
+Jak sie chodzilo kiedysik do kosciola? | https://youtu.be/oKDz3G5Fsxo | redirect
 Historie Sboru PDF | POHLED DO STOLETE HISTORIE HRADECKEHO SBORU.pdf | redirect
-Our Main Website | https://www.naskale.info | redirect
-Our YouTube | https://www.youtube.com/@cbhradek1675 | redirect
-Do not click this | https://www.youtube.com/watch?v=dQw4w9WgXcQ | redirect
+Naszo glowno strona | https://www.naskale.info | redirect
+Nasz YouTube | https://www.youtube.com/@cbhradek1675 | redirect
 
 
 
