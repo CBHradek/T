@@ -1,7 +1,7 @@
 # Add your links below. Rearrange the lines to change the order.
 # Format: Button Text | File/URL | redirect OR download
 
-Jak sie chodzilo kiedysik do kosciola? | https://youtu.be/oKDz3G5Fsxo | redirect
-
-
+Godzina Biblijna | https://www.youtube.com/watch?v=Ip_LQ2fMUH0 | redirect
+Wieczor chwal | https://drive.google.com/file/d/1V8wGEB6wVTEjiPXPW_JXrS1UpofOL-zb/view?usp=sharing | redirect
+Wywiad? Podcast? cos w tym stylu | https://www.youtube.com/watch?v=oKDz3G5Fsxo | redirect
 
