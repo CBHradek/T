@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linki do utworow</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* Black and white minimalist styling */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            margin: 0;
+        }
 
-    body {
-      background: black;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
+        #link-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Space between the windows */
+        }
 
-    .content {
-      width: min(800px, 90%);
-      text-align: center;
-      font-size: 24px;
-      line-height: 1.5;
-    }
-  </style>
+        .link-window {
+            display: block;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 25px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.2s, color 0.2s;
+            cursor: pointer;
+        }
+
+        /* Inverts colors when hovered over */
+        .link-window:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
-  <div class="content">
-    Tymczasem tu niczego niema.
-    Ale niemart sie to eszcze uzupelnie. :)
-  </div>
+
+    <div id="link-container">
+        </div>
+
+    <script>
+        // Fetch the text file containing your links
+        fetch('redirection_links.txt')
+            .then(response => response.text())
+            .then(text => {
+                const container = document.getElementById('link-container');
+                const lines = text.split('\n');
+
+                lines.forEach(line => {
+                    // Ignore empty lines or comment lines starting with #
+                    if (line.trim() === '' || line.startsWith('#')) return;
+
+                    // Split the line into 3 parts based on the '|' symbol
+                    const parts = line.split('|').map(part => part.trim());
+
+                    // Ensure the line was formatted correctly with 3 parts
+                    if (parts.length === 3) {
+                        const title = parts[0];
+                        const url = parts[1];
+                        const actionType = parts[2].toLowerCase();
+
+                        // Create the HTML button element
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.textContent = title;
+                        a.className = 'link-window';
+
+                        // If the text file says 'download', force it to download the file
+                        if (actionType === 'download') {
+                            a.setAttribute('download', '');
+                        }
+
+                        // Add the button to the page
+                        container.appendChild(a);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error loading the links file:', error);
+                document.getElementById('link-container').innerHTML = '<p>Error loading links.</p>';
+            });
+    </script>
 </body>
 </html>
